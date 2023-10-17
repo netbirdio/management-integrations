@@ -1,4 +1,4 @@
-module github.com/netbirdio/management-integrations
+module github.com/netbirdio/management-integrations/integrations
 
 go 1.20
 
