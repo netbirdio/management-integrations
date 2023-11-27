@@ -6,6 +6,6 @@ func ValidatePeersUpdateRequest(update *server.Peer, peer *server.Peer, manager 
 	return update, nil
 }
 
-func ValidatePeers(peers []*server.Peer, account *server.Account) ([]*server.Peer, error) {
-	return peers, nil
+func ValidatePeers(peers []*server.Peer, account *server.Account) []*server.Peer {
+	return peers
 }
