@@ -1,4 +1,4 @@
-package integrations
+package additions
 
 import (
 	"github.com/netbirdio/netbird/management/server/account"
