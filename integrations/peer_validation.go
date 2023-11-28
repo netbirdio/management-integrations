@@ -1,11 +1,15 @@
 package integrations
 
-import "github.com/netbirdio/netbird/management/server"
+import (
+	"github.com/netbirdio/netbird/management/server"
+	"github.com/netbirdio/netbird/management/server/activity"
+	nbpeer "github.com/netbirdio/netbird/management/server/peer"
+)
 
-func ValidatePeersUpdateRequest(update *server.Peer, peer *server.Peer, userID string, manager server.AccountManager) (*server.Peer, error) {
+func ValidatePeersUpdateRequest(update *nbpeer.Peer, peer *nbpeer.Peer, userID string, eventStore activity.Store, dnsDomain string) (*nbpeer.Peer, error) {
 	return update, nil
 }
 
-func ValidatePeers(peers []*server.Peer, account *server.Account) []*server.Peer {
+func ValidatePeers(peers []*nbpeer.Peer, account *server.Account) []*nbpeer.Peer {
 	return peers
 }
