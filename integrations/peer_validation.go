@@ -1,7 +1,6 @@
 package integrations
 
 import (
-	"github.com/netbirdio/netbird/management/server"
 	"github.com/netbirdio/netbird/management/server/activity"
 	nbpeer "github.com/netbirdio/netbird/management/server/peer"
 )
@@ -10,6 +9,6 @@ func ValidatePeersUpdateRequest(update *nbpeer.Peer, peer *nbpeer.Peer, userID s
 	return update, nil
 }
 
-func ValidatePeers(peers []*nbpeer.Peer, account *server.Account) []*nbpeer.Peer {
+func ValidatePeers(peers []*nbpeer.Peer) []*nbpeer.Peer {
 	return peers
 }
