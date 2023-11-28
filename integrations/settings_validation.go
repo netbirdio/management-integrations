@@ -9,6 +9,5 @@ func ValidateExtraSettings(extraSettings *server.ExtraSettings, account *server.
 	if extraSettings != nil {
 		return status.Errorf(status.InvalidArgument, "extra settings are only supported on the cloud version of NetBird")
 	}
-
 	return nil
 }

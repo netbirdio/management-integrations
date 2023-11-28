@@ -2,7 +2,7 @@ package integrations
 
 import "github.com/netbirdio/netbird/management/server"
 
-func ValidatePeersUpdateRequest(update *server.Peer, peer *server.Peer, manager server.AccountManager) (*server.Peer, error) {
+func ValidatePeersUpdateRequest(update *server.Peer, peer *server.Peer, userID string, manager server.AccountManager) (*server.Peer, error) {
 	return update, nil
 }
 
