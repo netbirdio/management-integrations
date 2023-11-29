@@ -5,7 +5,7 @@ import (
 	nbpeer "github.com/netbirdio/netbird/management/server/peer"
 )
 
-func ValidatePeersUpdateRequest(update *nbpeer.Peer, peer *nbpeer.Peer, userID string, eventStore activity.Store, dnsDomain string) (*nbpeer.Peer, error) {
+func ValidatePeersUpdateRequest(update *nbpeer.Peer, peer *nbpeer.Peer, userID string, accountID string, eventStore activity.Store, dnsDomain string) (*nbpeer.Peer, error) {
 	return update, nil
 }
 

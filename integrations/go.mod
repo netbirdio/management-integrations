@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/gorilla/mux v1.8.0
-	github.com/netbirdio/netbird v0.24.3-0.20231128133457-bab420ca7798
+	github.com/netbirdio/netbird v0.24.3-0.20231129141611-ba96e102b4d0
 )
 
 require (

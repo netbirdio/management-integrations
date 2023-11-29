@@ -333,6 +333,8 @@ github.com/netbirdio/netbird v0.24.3-0.20231128124526-a729c83b0659 h1:ACPd7uMKkB
 github.com/netbirdio/netbird v0.24.3-0.20231128124526-a729c83b0659/go.mod h1:5TrGRLGrGQZDEsGLQVR5KW8T82atu6J2WvOJcxQmtmE=
 github.com/netbirdio/netbird v0.24.3-0.20231128133457-bab420ca7798 h1:k0FvU2kxsZC/rikDD2JdC5CjuX5s09wUue6xq87f/AE=
 github.com/netbirdio/netbird v0.24.3-0.20231128133457-bab420ca7798/go.mod h1:5TrGRLGrGQZDEsGLQVR5KW8T82atu6J2WvOJcxQmtmE=
+github.com/netbirdio/netbird v0.24.3-0.20231129141611-ba96e102b4d0 h1:YpQ5W2jMrgYnA7D8HaDSN1lp4EIiX+Bjiy1eZu7g79o=
+github.com/netbirdio/netbird v0.24.3-0.20231129141611-ba96e102b4d0/go.mod h1:hpQh9IuhAuQbtQAPFMwdlcIZ1zowW8OIyHOQZCQKoAE=
 github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e/go.mod h1:zD1mROLANZcx1PVRCS0qkT7pwLkGfwJo4zjcN/Tysno=
 github.com/nxadm/tail v1.4.4/go.mod h1:kenIhsEOeOJmVchQTgglprH7qJGnHDVpk1VPCcaMI8A=
 github.com/nxadm/tail v1.4.8 h1:nPr65rt6Y5JFSKQO7qToXr7pePgD6Gwiw05lkbyAQTE=
