@@ -1,7 +1,7 @@
 package additions
 
 import (
-	"github.com/netbirdio/netbird/management/server"
+	"github.com/netbirdio/netbird/management/server/account"
 	"github.com/netbirdio/netbird/management/server/activity"
 	nbpeer "github.com/netbirdio/netbird/management/server/peer"
 )
@@ -14,6 +14,6 @@ func ValidatePeers(peers []*nbpeer.Peer) []*nbpeer.Peer {
 	return peers
 }
 
-func PreparePeer(peer *nbpeer.Peer, settings *server.Settings) *nbpeer.Peer {
+func PreparePeer(peer *nbpeer.Peer, extraSettings account.ExtraSettings) *nbpeer.Peer {
 	return peer.Copy()
 }
