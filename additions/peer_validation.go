@@ -14,6 +14,6 @@ func ValidatePeers(peers []*nbpeer.Peer) []*nbpeer.Peer {
 	return peers
 }
 
-func PreparePeer(peer *nbpeer.Peer, settings server.Settings) *nbpeer.Peer {
+func PreparePeer(peer *nbpeer.Peer, settings *server.Settings) *nbpeer.Peer {
 	return peer.Copy()
 }
