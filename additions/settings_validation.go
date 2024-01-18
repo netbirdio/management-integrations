@@ -9,7 +9,7 @@ import (
 
 func ValidateExtraSettings(newExtraSettings *account.ExtraSettings, oldExtraSettings *account.ExtraSettings, peers map[string]*nbpeer.Peer, userID string, accountID string, eventStore activity.Store) error {
 	if newExtraSettings != nil {
-		if oldExtraSettings != nil {
+		if oldExtraSettings == nil {
 			log.Info("extra settings are only supported on the cloud version of NetBird")
 		}
 		if newExtraSettings.PeerApprovalEnabled {
