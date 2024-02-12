@@ -1,6 +1,8 @@
 package integrations
 
 import (
+	"context"
+
 	"github.com/gorilla/mux"
 	"github.com/netbirdio/netbird/management/server"
 	"github.com/netbirdio/netbird/management/server/activity"
@@ -10,11 +12,13 @@ import (
 )
 
 func RegisterHandlers(
+	ctx context.Context,
+	prefix string,
 	router *mux.Router,
 	accountManager server.AccountManager,
 	extractor *jwtclaims.ClaimsExtractor,
-) *mux.Router {
-	return router
+) (*mux.Router, error) {
+	return router, nil
 }
 
 func InitEventStore(dataDir string, key string) (activity.Store, string, error) {
