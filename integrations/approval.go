@@ -12,7 +12,7 @@ func NewIntegratedApproval() *IntegratedApprovalImpl {
 	return &IntegratedApprovalImpl{}
 }
 
-func (v *IntegratedApprovalImpl) PreparePeer(peer *nbpeer.Peer, _ *account.ExtraSettings, _ []string) *nbpeer.Peer {
+func (v *IntegratedApprovalImpl) PreparePeer(peer *nbpeer.Peer, _ *account.ExtraSettings) *nbpeer.Peer {
 	return peer.Copy()
 }
 
