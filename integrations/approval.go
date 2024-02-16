@@ -12,10 +12,10 @@ func NewIntegratedApproval() *IntegratedApprovalImpl {
 	return &IntegratedApprovalImpl{}
 }
 
-func (v *IntegratedApprovalImpl) PreparePeer(peer *nbpeer.Peer, _ *account.ExtraSettings) *nbpeer.Peer {
+func (v *IntegratedApprovalImpl) PreparePeer(_ string, peer *nbpeer.Peer, _ []string, _ *account.ExtraSettings) *nbpeer.Peer {
 	return peer.Copy()
 }
 
-func (v *IntegratedApprovalImpl) ValidatePeer(*nbpeer.Peer) (bool, error) {
+func (v *IntegratedApprovalImpl) ValidatePeer(string, *nbpeer.Peer, []string, []string) (bool, error) {
 	return true, nil
 }
