@@ -16,6 +16,6 @@ func (v *IntegratedApprovalImpl) PreparePeer(_ string, peer *nbpeer.Peer, _ []st
 	return peer.Copy()
 }
 
-func (v *IntegratedApprovalImpl) ValidatePeer(string, *nbpeer.Peer, []string, []string) (bool, error) {
+func (v *IntegratedApprovalImpl) SyncPeer(string, *nbpeer.Peer, []string, *account.ExtraSettings) (bool, error) {
 	return true, nil
 }
