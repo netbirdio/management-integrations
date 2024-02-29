@@ -8,8 +8,8 @@ import (
 type IntegratedApprovalImpl struct {
 }
 
-func NewIntegratedApproval() *IntegratedApprovalImpl {
-	return &IntegratedApprovalImpl{}
+func NewIntegratedApproval() (*IntegratedApprovalImpl, error) {
+	return &IntegratedApprovalImpl{}, nil
 }
 
 func (v *IntegratedApprovalImpl) PreparePeer(_ string, peer *nbpeer.Peer, _ []string, _ *account.ExtraSettings) *nbpeer.Peer {
