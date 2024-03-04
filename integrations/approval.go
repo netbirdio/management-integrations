@@ -19,3 +19,6 @@ func (v *IntegratedApprovalImpl) PreparePeer(_ string, peer *nbpeer.Peer, _ []st
 func (v *IntegratedApprovalImpl) IsRequiresApproval(accountID string, peer *nbpeer.Peer, peersGroup []string, extraSettings *account.ExtraSettings) bool {
 	return false
 }
+
+func (v *IntegratedApprovalImpl) Stop() {
+}
