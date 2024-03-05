@@ -2,13 +2,14 @@ package integrations
 
 import (
 	"github.com/netbirdio/netbird/management/server/account"
+	"github.com/netbirdio/netbird/management/server/activity"
 	nbpeer "github.com/netbirdio/netbird/management/server/peer"
 )
 
 type IntegratedApprovalImpl struct {
 }
 
-func NewIntegratedApproval() (*IntegratedApprovalImpl, error) {
+func NewIntegratedApproval(activity.Store) (*IntegratedApprovalImpl, error) {
 	return &IntegratedApprovalImpl{}, nil
 }
 
