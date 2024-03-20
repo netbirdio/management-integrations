@@ -29,7 +29,7 @@ func (v *IntegratedValidatorImpl) IsNotValidPeer(_ string, _ *nbpeer.Peer, _ []s
 	return false
 }
 
-func (v *IntegratedValidatorImpl) GetValidatedPeers(_ string, peers map[string]*nbpeer.Peer, _ *account.ExtraSettings) (map[string]struct{}, error) {
+func (v *IntegratedValidatorImpl) GetValidatedPeers(_ string, _ map[string][]string, peers map[string]*nbpeer.Peer, _ *account.ExtraSettings) (map[string]struct{}, error) {
 	validatedPeers := make(map[string]struct{})
 	for p := range peers {
 		validatedPeers[p] = struct{}{}
