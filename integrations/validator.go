@@ -38,5 +38,9 @@ func (v *IntegratedValidatorImpl) GetValidatedPeers(_ string, _ map[string]*grou
 	return validatedPeers, nil
 }
 
+func (v *IntegratedValidatorImpl) PeerDeleted(_, _ string) error {
+	return nil
+}
+
 func (v *IntegratedValidatorImpl) Stop() {
 }
