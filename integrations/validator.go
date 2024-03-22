@@ -42,5 +42,9 @@ func (v *IntegratedValidatorImpl) PeerDeleted(_, _ string) error {
 	return nil
 }
 
+func (v *IntegratedValidatorImpl) SetPeerInvalidationListener(_ func(accountID string)) {
+
+}
+
 func (v *IntegratedValidatorImpl) Stop() {
 }
