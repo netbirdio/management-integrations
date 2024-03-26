@@ -26,8 +26,8 @@ func (v *IntegratedValidatorImpl) PreparePeer(_ string, peer *nbpeer.Peer, _ []s
 	return peer.Copy()
 }
 
-func (v *IntegratedValidatorImpl) IsNotValidPeer(_ string, _ *nbpeer.Peer, _ []string, _ *account.ExtraSettings) bool {
-	return false
+func (v *IntegratedValidatorImpl) IsNotValidPeer(_ string, _ *nbpeer.Peer, _ []string, _ *account.ExtraSettings) (bool, bool) {
+	return false, false
 }
 
 func (v *IntegratedValidatorImpl) GetValidatedPeers(_ string, _ map[string]*group.Group, peers map[string]*nbpeer.Peer, _ *account.ExtraSettings) (map[string]struct{}, error) {
