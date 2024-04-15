@@ -4,11 +4,13 @@ import (
 	"context"
 
 	"github.com/gorilla/mux"
+	log "github.com/sirupsen/logrus"
+
 	"github.com/netbirdio/netbird/management/server"
 	"github.com/netbirdio/netbird/management/server/activity"
 	"github.com/netbirdio/netbird/management/server/activity/sqlite"
+	"github.com/netbirdio/netbird/management/server/integrated_validator"
 	"github.com/netbirdio/netbird/management/server/jwtclaims"
-	log "github.com/sirupsen/logrus"
 )
 
 func RegisterHandlers(
@@ -17,6 +19,7 @@ func RegisterHandlers(
 	router *mux.Router,
 	accountManager server.AccountManager,
 	extractor *jwtclaims.ClaimsExtractor,
+	integratedValidator integrated_validator.IntegratedValidator,
 ) (*mux.Router, error) {
 	return router, nil
 }
