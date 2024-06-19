@@ -24,7 +24,7 @@ func RegisterHandlers(
 	return router, nil
 }
 
-func InitEventStore(dataDir string, key string) (activity.Store, string, error) {
+func InitEventStore(ctx context.Context, dataDir string, key string) (activity.Store, string, error) {
 	var err error
 	if key == "" {
 		log.Debugf("generate new activity store encryption key")
@@ -33,6 +33,6 @@ func InitEventStore(dataDir string, key string) (activity.Store, string, error) 
 			return nil, "", err
 		}
 	}
-	store, err := sqlite.NewSQLiteStore(dataDir, key)
+	store, err := sqlite.NewSQLiteStore(ctx, dataDir, key)
 	return store, key, err
 }
