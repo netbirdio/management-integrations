@@ -6,7 +6,7 @@ toolchain go1.21.1
 
 require (
 	github.com/gorilla/mux v1.8.0
-	github.com/netbirdio/netbird v0.27.11-0.20240619130514-90db190b7357
+	github.com/netbirdio/netbird v0.27.11-0.20240628133012-fb597a40bd18
 )
 
 require (
