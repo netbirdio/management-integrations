@@ -5,6 +5,7 @@ import (
 
 	"github.com/gorilla/mux"
 	log "github.com/sirupsen/logrus"
+	"go.opentelemetry.io/otel/metric"
 
 	"github.com/netbirdio/netbird/management/server"
 	"github.com/netbirdio/netbird/management/server/activity"
@@ -20,6 +21,7 @@ func RegisterHandlers(
 	accountManager server.AccountManager,
 	extractor *jwtclaims.ClaimsExtractor,
 	integratedValidator integrated_validator.IntegratedValidator,
+	meter metric.Meter,
 ) (*mux.Router, error) {
 	return router, nil
 }
