@@ -4,6 +4,9 @@ import (
 	"context"
 
 	"github.com/gorilla/mux"
+	"github.com/netbirdio/netbird/management/server/integrations/port_forwarding"
+	"github.com/netbirdio/netbird/management/server/peers"
+	"github.com/netbirdio/netbird/management/server/permissions"
 	log "github.com/sirupsen/logrus"
 	"go.opentelemetry.io/otel/metric"
 
@@ -22,6 +25,9 @@ func RegisterHandlers(
 	extractor *jwtclaims.ClaimsExtractor,
 	integratedValidator integrated_validator.IntegratedValidator,
 	meter metric.Meter,
+	permissionsManager permissions.Manager,
+	peersManager peers.Manager,
+	proxyController port_forwarding.Controller,
 ) (*mux.Router, error) {
 	return router, nil
 }
