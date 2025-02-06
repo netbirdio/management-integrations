@@ -11,7 +11,6 @@ import (
 	"github.com/netbirdio/netbird/management/server/activity"
 	"github.com/netbirdio/netbird/management/server/activity/sqlite"
 	"github.com/netbirdio/netbird/management/server/integrated_validator"
-	"github.com/netbirdio/netbird/management/server/jwtclaims"
 )
 
 func RegisterHandlers(
@@ -19,7 +18,6 @@ func RegisterHandlers(
 	prefix string,
 	router *mux.Router,
 	accountManager server.AccountManager,
-	extractor *jwtclaims.ClaimsExtractor,
 	integratedValidator integrated_validator.IntegratedValidator,
 	meter metric.Meter,
 ) (*mux.Router, error) {
