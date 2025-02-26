@@ -3,7 +3,6 @@ package integrations
 import (
 	"context"
 
-	"github.com/netbirdio/netbird/management/server/account"
 	"github.com/netbirdio/netbird/management/server/activity"
 	nbpeer "github.com/netbirdio/netbird/management/server/peer"
 	"github.com/netbirdio/netbird/management/server/types"
@@ -16,23 +15,23 @@ func NewIntegratedValidator(_ context.Context, store activity.Store) (*Integrate
 	return &IntegratedValidatorImpl{}, nil
 }
 
-func (v *IntegratedValidatorImpl) ValidateExtraSettings(context.Context, *account.ExtraSettings, *account.ExtraSettings, map[string]*nbpeer.Peer, string, string) error {
+func (v *IntegratedValidatorImpl) ValidateExtraSettings(context.Context, *types.ExtraSettings, *types.ExtraSettings, map[string]*nbpeer.Peer, string, string) error {
 	return nil
 }
 
-func (v *IntegratedValidatorImpl) ValidatePeer(_ context.Context, update *nbpeer.Peer, _ *nbpeer.Peer, _ string, _ string, _ string, _ []string, _ *account.ExtraSettings) (*nbpeer.Peer, bool, error) {
+func (v *IntegratedValidatorImpl) ValidatePeer(_ context.Context, update *nbpeer.Peer, _ *nbpeer.Peer, _ string, _ string, _ string, _ []string, _ *types.ExtraSettings) (*nbpeer.Peer, bool, error) {
 	return update, false, nil
 }
 
-func (v *IntegratedValidatorImpl) PreparePeer(_ context.Context, _ string, peer *nbpeer.Peer, _ []string, _ *account.ExtraSettings) *nbpeer.Peer {
+func (v *IntegratedValidatorImpl) PreparePeer(_ context.Context, _ string, peer *nbpeer.Peer, _ []string, _ *types.ExtraSettings) *nbpeer.Peer {
 	return peer.Copy()
 }
 
-func (v *IntegratedValidatorImpl) IsNotValidPeer(_ context.Context, _ string, _ *nbpeer.Peer, _ []string, _ *account.ExtraSettings) (bool, bool, error) {
+func (v *IntegratedValidatorImpl) IsNotValidPeer(_ context.Context, _ string, _ *nbpeer.Peer, _ []string, _ *types.ExtraSettings) (bool, bool, error) {
 	return false, false, nil
 }
 
-func (v *IntegratedValidatorImpl) GetValidatedPeers(_ string, _ []*types.Group, peers []*nbpeer.Peer, _ *account.ExtraSettings) (map[string]struct{}, error) {
+func (v *IntegratedValidatorImpl) GetValidatedPeers(_ string, _ []*types.Group, peers []*nbpeer.Peer, _ *types.ExtraSettings) (map[string]struct{}, error) {
 	validatedPeers := make(map[string]struct{})
 	for _, p := range peers {
 		validatedPeers[p.ID] = struct{}{}

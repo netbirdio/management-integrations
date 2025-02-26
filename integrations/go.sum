@@ -303,6 +303,8 @@ github.com/netbirdio/netbird v0.37.2-0.20250226105245-d8f246fbaeaf h1:J1W0lfe7HF
 github.com/netbirdio/netbird v0.37.2-0.20250226105245-d8f246fbaeaf/go.mod h1:FiWFoWGn9BBIQXI8RZz8CWuhtHTOEvZagkw2B4SP1A4=
 github.com/netbirdio/netbird v0.37.2-0.20250226164009-e6c62c023b78 h1:C3WNbntv1TdGLv5Z4G74+RHA2sHtAY/0i0c0l+QPRPo=
 github.com/netbirdio/netbird v0.37.2-0.20250226164009-e6c62c023b78/go.mod h1:LPzGSNMW+yl2cCVLOLGCM2gh00raxbuR/Q8g0q9rams=
+github.com/netbirdio/netbird v0.37.2-0.20250226164836-b90c10191ea9 h1:F51Z+pNSxhIvfDGJOeHGOFyh4JOv9mNdzOoiKEgjryo=
+github.com/netbirdio/netbird v0.37.2-0.20250226164836-b90c10191ea9/go.mod h1:qbqfE9xtYEBW9loBBhqVV5PADHSfOlg45i9BO7gWD6c=
 github.com/nxadm/tail v1.4.8 h1:nPr65rt6Y5JFSKQO7qToXr7pePgD6Gwiw05lkbyAQTE=
 github.com/nxadm/tail v1.4.8/go.mod h1:+ncqLTQzXmGhMZNUePPaPqPvBxHAIsmXswZKocGu+AU=
 github.com/okta/okta-sdk-golang/v2 v2.18.0 h1:cfDasMb7CShbZvOrF6n+DnLevWwiHgedWMGJ8M8xKDc=

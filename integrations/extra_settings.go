@@ -3,7 +3,7 @@ package integrations
 import (
 	"context"
 
-	"github.com/netbirdio/netbird/management/server/account"
+	"github.com/netbirdio/netbird/management/server/types"
 
 	"github.com/netbirdio/netbird/management/server/integrations/extra_settings"
 )
@@ -15,10 +15,10 @@ func NewManager() extra_settings.Manager {
 	return &ManagerImpl{}
 }
 
-func (m *ManagerImpl) GetExtraSettings(ctx context.Context, accountID string) (*account.ExtraSettings, error) {
-	return &account.ExtraSettings{}, nil
+func (m *ManagerImpl) GetExtraSettings(ctx context.Context, accountID string) (*types.ExtraSettings, error) {
+	return &types.ExtraSettings{}, nil
 }
 
-func (m *ManagerImpl) UpdateExtraSettings(ctx context.Context, accountID string, accountExtraSettings *account.ExtraSettings) error {
+func (m *ManagerImpl) UpdateExtraSettings(ctx context.Context, accountID string, accountExtraSettings *types.ExtraSettings) error {
 	return nil
 }
