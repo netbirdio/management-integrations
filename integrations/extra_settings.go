@@ -5,13 +5,13 @@ import (
 
 	"github.com/netbirdio/netbird/management/server/account"
 
-	"github.com/netbirdio/netbird/management/server/integrations/flow"
+	"github.com/netbirdio/netbird/management/server/integrations/extra_settings"
 )
 
 type ManagerImpl struct {
 }
 
-func NewManager() flow.Manager {
+func NewManager() extra_settings.Manager {
 	return &ManagerImpl{}
 }
 

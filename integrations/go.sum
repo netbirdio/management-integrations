@@ -297,6 +297,10 @@ github.com/netbirdio/netbird v0.36.6-0.20250131121451-1cbc620614c0 h1:OAi/LrXT11
 github.com/netbirdio/netbird v0.36.6-0.20250131121451-1cbc620614c0/go.mod h1:fCfS9irHLGOXoLWv23CcX3lJzVcqtDOVaalqGqUdAgc=
 github.com/netbirdio/netbird v0.37.2-0.20250226104302-59f0c88d9149 h1:HNNZaja3u2h991rJJt3V/N5cDn1c/549fthZqHZvC7w=
 github.com/netbirdio/netbird v0.37.2-0.20250226104302-59f0c88d9149/go.mod h1:FiWFoWGn9BBIQXI8RZz8CWuhtHTOEvZagkw2B4SP1A4=
+github.com/netbirdio/netbird v0.37.2-0.20250226105025-467906913923 h1:a+b1BJdihAR0OO2gf/OjQgUz2K0JW8+e8ZMJ9u8oftY=
+github.com/netbirdio/netbird v0.37.2-0.20250226105025-467906913923/go.mod h1:FiWFoWGn9BBIQXI8RZz8CWuhtHTOEvZagkw2B4SP1A4=
+github.com/netbirdio/netbird v0.37.2-0.20250226105245-d8f246fbaeaf h1:J1W0lfe7HF4oPNqxsFLAaqX4Dgm23aUzYwENm/6WIbg=
+github.com/netbirdio/netbird v0.37.2-0.20250226105245-d8f246fbaeaf/go.mod h1:FiWFoWGn9BBIQXI8RZz8CWuhtHTOEvZagkw2B4SP1A4=
 github.com/nxadm/tail v1.4.8 h1:nPr65rt6Y5JFSKQO7qToXr7pePgD6Gwiw05lkbyAQTE=
 github.com/nxadm/tail v1.4.8/go.mod h1:+ncqLTQzXmGhMZNUePPaPqPvBxHAIsmXswZKocGu+AU=
 github.com/okta/okta-sdk-golang/v2 v2.18.0 h1:cfDasMb7CShbZvOrF6n+DnLevWwiHgedWMGJ8M8xKDc=
