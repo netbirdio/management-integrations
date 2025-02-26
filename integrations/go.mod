@@ -6,7 +6,7 @@ toolchain go1.23.1
 
 require (
 	github.com/gorilla/mux v1.8.0
-	github.com/netbirdio/netbird v0.36.6-0.20250131121451-1cbc620614c0
+	github.com/netbirdio/netbird v0.37.2-0.20250226104302-59f0c88d9149
 	github.com/sirupsen/logrus v1.9.3
 	go.opentelemetry.io/otel/metric v1.26.0
 )
