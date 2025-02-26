@@ -4,13 +4,13 @@ import (
 	"context"
 
 	"github.com/gorilla/mux"
+	"github.com/netbirdio/netbird/management/server/account"
 	"github.com/netbirdio/netbird/management/server/integrations/port_forwarding"
 	"github.com/netbirdio/netbird/management/server/peers"
 	"github.com/netbirdio/netbird/management/server/permissions"
 	log "github.com/sirupsen/logrus"
 	"go.opentelemetry.io/otel/metric"
 
-	"github.com/netbirdio/netbird/management/server"
 	"github.com/netbirdio/netbird/management/server/activity"
 	"github.com/netbirdio/netbird/management/server/activity/sqlite"
 	"github.com/netbirdio/netbird/management/server/integrations/integrated_validator"
@@ -20,7 +20,7 @@ func RegisterHandlers(
 	ctx context.Context,
 	prefix string,
 	router *mux.Router,
-	accountManager server.AccountManager,
+	accountManager account.AccountManager,
 	integratedValidator integrated_validator.IntegratedValidator,
 	meter metric.Meter,
 	permissionsManager permissions.Manager,
