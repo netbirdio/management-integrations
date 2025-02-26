@@ -8,6 +8,7 @@ import (
 	"github.com/netbirdio/netbird/management/server/integrations/port_forwarding"
 	"github.com/netbirdio/netbird/management/server/peers"
 	"github.com/netbirdio/netbird/management/server/permissions"
+	"github.com/netbirdio/netbird/management/server/settings"
 	log "github.com/sirupsen/logrus"
 	"go.opentelemetry.io/otel/metric"
 
@@ -26,6 +27,7 @@ func RegisterHandlers(
 	permissionsManager permissions.Manager,
 	peersManager peers.Manager,
 	proxyController port_forwarding.Controller,
+	settingsManager settings.Manager,
 ) (*mux.Router, error) {
 	return router, nil
 }
