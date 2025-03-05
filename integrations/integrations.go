@@ -4,11 +4,14 @@ import (
 	"context"
 
 	"github.com/gorilla/mux"
+	log "github.com/sirupsen/logrus"
+	"go.opentelemetry.io/otel/metric"
+
 	"github.com/netbirdio/netbird/management/server/integrations/port_forwarding"
 	"github.com/netbirdio/netbird/management/server/peers"
 	"github.com/netbirdio/netbird/management/server/permissions"
-	log "github.com/sirupsen/logrus"
-	"go.opentelemetry.io/otel/metric"
+	"github.com/netbirdio/netbird/management/server/settings"
+	"github.com/netbirdio/netbird/management/server/users"
 
 	"github.com/netbirdio/netbird/management/server"
 	"github.com/netbirdio/netbird/management/server/activity"
@@ -41,4 +44,8 @@ func InitEventStore(ctx context.Context, dataDir string, key string) (activity.S
 	}
 	store, err := sqlite.NewSQLiteStore(ctx, dataDir, key)
 	return store, key, err
+}
+
+func InitPermissionsManager(userManager users.Manager, settingsManager settings.Manager) permissions.Manager {
+	return permissions.NewManager(userManager, settingsManager)
 }
