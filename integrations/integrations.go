@@ -15,6 +15,7 @@ import (
 	"github.com/netbirdio/netbird/management/server/peers"
 	"github.com/netbirdio/netbird/management/server/permissions"
 	"github.com/netbirdio/netbird/management/server/settings"
+	"github.com/netbirdio/netbird/management/server/users"
 )
 
 func RegisterHandlers(
@@ -43,4 +44,8 @@ func InitEventStore(ctx context.Context, dataDir string, key string) (activity.S
 	}
 	store, err := sqlite.NewSQLiteStore(ctx, dataDir, key)
 	return store, key, err
+}
+
+func InitPermissionsManager(userManager users.Manager, settingsManager settings.Manager) permissions.Manager {
+	return permissions.NewManager(userManager, settingsManager)
 }
