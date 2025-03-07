@@ -25,3 +25,7 @@ func (c *controllerImpl) SendUpdate(ctx context.Context, accountID string, affec
 func (c *controllerImpl) GetProxyNetworkMaps(ctx context.Context, accountID string) (map[string]*types.NetworkMap, error) {
 	return make(map[string]*types.NetworkMap), nil
 }
+
+func (c *controllerImpl) IsPeerInIngressPorts(ctx context.Context, accountID, peerID string) (bool, error) {
+	return false, nil
+}
