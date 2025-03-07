@@ -4,17 +4,17 @@ import (
 	"context"
 
 	"github.com/gorilla/mux"
+	log "github.com/sirupsen/logrus"
+	"go.opentelemetry.io/otel/metric"
+
 	"github.com/netbirdio/netbird/management/server/account"
+	"github.com/netbirdio/netbird/management/server/activity"
+	"github.com/netbirdio/netbird/management/server/activity/sqlite"
+	"github.com/netbirdio/netbird/management/server/integrations/integrated_validator"
 	"github.com/netbirdio/netbird/management/server/integrations/port_forwarding"
 	"github.com/netbirdio/netbird/management/server/peers"
 	"github.com/netbirdio/netbird/management/server/permissions"
 	"github.com/netbirdio/netbird/management/server/settings"
-	log "github.com/sirupsen/logrus"
-	"go.opentelemetry.io/otel/metric"
-
-	"github.com/netbirdio/netbird/management/server/activity"
-	"github.com/netbirdio/netbird/management/server/activity/sqlite"
-	"github.com/netbirdio/netbird/management/server/integrations/integrated_validator"
 )
 
 func RegisterHandlers(
