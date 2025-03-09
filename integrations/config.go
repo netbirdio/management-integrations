@@ -1,4 +1,4 @@
-package config
+package integrations
 
 import (
 	"github.com/netbirdio/netbird/management/proto"
