@@ -21,7 +21,7 @@ func RegisterHandlers(
 	ctx context.Context,
 	prefix string,
 	router *mux.Router,
-	accountManager account.AccountManager,
+	accountManager account.Manager,
 	integratedValidator integrated_validator.IntegratedValidator,
 	meter metric.Meter,
 	permissionsManager permissions.Manager,
