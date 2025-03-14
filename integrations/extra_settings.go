@@ -3,6 +3,7 @@ package integrations
 import (
 	"context"
 
+	"github.com/netbirdio/netbird/management/server/activity"
 	"github.com/netbirdio/netbird/management/server/types"
 
 	"github.com/netbirdio/netbird/management/server/integrations/extra_settings"
@@ -11,7 +12,7 @@ import (
 type ManagerImpl struct {
 }
 
-func NewManager() extra_settings.Manager {
+func NewManager(eventStore activity.Store) extra_settings.Manager {
 	return &ManagerImpl{}
 }
 
