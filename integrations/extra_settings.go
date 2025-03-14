@@ -19,6 +19,6 @@ func (m *ManagerImpl) GetExtraSettings(ctx context.Context, accountID string) (*
 	return &types.ExtraSettings{}, nil
 }
 
-func (m *ManagerImpl) UpdateExtraSettings(ctx context.Context, accountID string, accountExtraSettings *types.ExtraSettings) error {
+func (m *ManagerImpl) UpdateExtraSettings(ctx context.Context, accountID, userID string, accountExtraSettings *types.ExtraSettings) error {
 	return nil
 }
