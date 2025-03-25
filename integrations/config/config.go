@@ -5,6 +5,6 @@ import (
 	"github.com/netbirdio/netbird/management/server/types"
 )
 
-func ExtendNetBirdConfig(config *proto.NetbirdConfig, extraSettings *types.ExtraSettings) {
+func ExtendNetBirdConfig(peerID string, config *proto.NetbirdConfig, extraSettings *types.ExtraSettings) {
 	return
 }
