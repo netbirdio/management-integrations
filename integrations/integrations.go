@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/gorilla/mux"
+	"github.com/netbirdio/netbird/management/server/store"
 	log "github.com/sirupsen/logrus"
 	"go.opentelemetry.io/otel/metric"
 
@@ -15,7 +16,6 @@ import (
 	"github.com/netbirdio/netbird/management/server/peers"
 	"github.com/netbirdio/netbird/management/server/permissions"
 	"github.com/netbirdio/netbird/management/server/settings"
-	"github.com/netbirdio/netbird/management/server/users"
 )
 
 func RegisterHandlers(
@@ -46,6 +46,6 @@ func InitEventStore(ctx context.Context, dataDir string, key string) (activity.S
 	return store, key, err
 }
 
-func InitPermissionsManager(userManager users.Manager, settingsManager settings.Manager) permissions.Manager {
-	return permissions.NewManager(userManager, settingsManager)
+func InitPermissionsManager(store store.Store) permissions.Manager {
+	return permissions.NewManager(store)
 }
