@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/gorilla/mux"
+	"github.com/netbirdio/netbird/management/server/store"
 	log "github.com/sirupsen/logrus"
 	"go.opentelemetry.io/otel/metric"
 
@@ -43,4 +44,8 @@ func InitEventStore(ctx context.Context, dataDir string, key string) (activity.S
 	}
 	store, err := sqlite.NewSQLiteStore(ctx, dataDir, key)
 	return store, key, err
+}
+
+func InitPermissionsManager(store store.Store) permissions.Manager {
+	return permissions.NewManager(store)
 }
