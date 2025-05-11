@@ -4,9 +4,11 @@ import (
 	"context"
 
 	"github.com/gorilla/mux"
-	"github.com/netbirdio/netbird/management/server/store"
 	log "github.com/sirupsen/logrus"
 	"go.opentelemetry.io/otel/metric"
+
+	"github.com/netbirdio/netbird/management/server/store"
+	"github.com/netbirdio/netbird/management/server/telemetry"
 
 	"github.com/netbirdio/netbird/management/server/account"
 	"github.com/netbirdio/netbird/management/server/activity"
@@ -33,7 +35,7 @@ func RegisterHandlers(
 	return router, nil
 }
 
-func InitEventStore(ctx context.Context, dataDir string, key string) (activity.Store, string, error) {
+func InitEventStore(ctx context.Context, dataDir string, key string, _ telemetry.AppMetrics) (activity.Store, string, error) {
 	var err error
 	if key == "" {
 		log.Debugf("generate new activity store encryption key")
