@@ -35,7 +35,7 @@ func RegisterHandlers(
 	return router, nil
 }
 
-func InitEventStore(ctx context.Context, dataDir string, key string, _ telemetry.AppMetrics) (activity.Store, string, error) {
+func InitEventStore(ctx context.Context, dataDir string, key string, _ IntegrationMetrics) (activity.Store, string, error) {
 	var err error
 	if key == "" {
 		log.Debugf("generate new activity store encryption key")
@@ -50,4 +50,12 @@ func InitEventStore(ctx context.Context, dataDir string, key string, _ telemetry
 
 func InitPermissionsManager(store store.Store) permissions.Manager {
 	return permissions.NewManager(store)
+}
+
+type IntegrationMetrics interface {
+	telemetry.AppMetrics
+}
+
+func InitIntegrationMetrics(ctx context.Context, metrics telemetry.AppMetrics) (IntegrationMetrics, error) {
+	return metrics, nil
 }
