@@ -7,6 +7,9 @@ import (
 	log "github.com/sirupsen/logrus"
 	"go.opentelemetry.io/otel/metric"
 
+	"github.com/netbirdio/netbird/management/server/store"
+	"github.com/netbirdio/netbird/management/server/telemetry"
+
 	"github.com/netbirdio/netbird/management/server/account"
 	"github.com/netbirdio/netbird/management/server/activity"
 	activitystore "github.com/netbirdio/netbird/management/server/activity/store"
@@ -33,7 +36,7 @@ func RegisterHandlers(
 	return router, nil
 }
 
-func InitEventStore(ctx context.Context, dataDir string, key string) (activity.Store, string, error) {
+func InitEventStore(ctx context.Context, dataDir string, key string, _ Metrics) (activity.Store, string, error) {
 	var err error
 	if key == "" {
 		log.Debugf("generate new activity store encryption key")
@@ -48,4 +51,14 @@ func InitEventStore(ctx context.Context, dataDir string, key string) (activity.S
 
 func InitPermissionsManager(store store.Store) permissions.Manager {
 	return permissions.NewManager(store)
+}
+
+type Metrics struct {
+	telemetry.AppMetrics
+}
+
+func InitIntegrationMetrics(ctx context.Context, metrics telemetry.AppMetrics) (*Metrics, error) {
+	return &Metrics{
+		AppMetrics: metrics,
+	}, nil
 }
