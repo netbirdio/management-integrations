@@ -36,7 +36,7 @@ func RegisterHandlers(
 	return router, nil
 }
 
-func InitEventStore(ctx context.Context, dataDir string, key string, _ Metrics) (activity.Store, string, error) {
+func InitEventStore(ctx context.Context, dataDir string, key string, _ *Metrics) (activity.Store, string, error) {
 	var err error
 	if key == "" {
 		log.Debugf("generate new activity store encryption key")
