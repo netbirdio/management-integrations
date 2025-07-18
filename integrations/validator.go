@@ -3,6 +3,7 @@ package integrations
 import (
 	"context"
 
+	"github.com/netbirdio/netbird/management/proto"
 	"github.com/netbirdio/netbird/management/server/activity"
 	nbpeer "github.com/netbirdio/netbird/management/server/peer"
 	"github.com/netbirdio/netbird/management/server/types"
@@ -48,4 +49,8 @@ func (v *IntegratedValidatorImpl) SetPeerInvalidationListener(_ func(accountID s
 }
 
 func (v *IntegratedValidatorImpl) Stop(ctx context.Context) {
+}
+
+func (v *IntegratedValidatorImpl) ValidateFlowResponse(ctx context.Context, peerKey string, flowResponse *proto.PKCEAuthorizationFlow) *proto.PKCEAuthorizationFlow {
+	return flowResponse
 }
