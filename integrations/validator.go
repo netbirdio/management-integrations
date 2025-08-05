@@ -44,7 +44,7 @@ func (v *IntegratedValidatorImpl) PeerDeleted(ctx context.Context, _, _ string, 
 	return nil
 }
 
-func (v *IntegratedValidatorImpl) SetPeerInvalidationListener(_ func(accountID string)) {
+func (v *IntegratedValidatorImpl) SetPeerInvalidationListener(_ func(accountID string, peerIDs []string)) {
 
 }
 
