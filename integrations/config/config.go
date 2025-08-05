@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/netbirdio/netbird/management/proto"
+	"github.com/netbirdio/netbird/shared/management/proto"
 	"github.com/netbirdio/netbird/management/server/types"
 )
 
