@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/netbirdio/netbird/management/server/integrations/port_forwarding"
+	"github.com/netbirdio/netbird/management/server/peer"
 	"github.com/netbirdio/netbird/management/server/store"
 	"github.com/netbirdio/netbird/management/server/types"
 )
@@ -18,11 +19,15 @@ func NewController(store store.Store) port_forwarding.Controller {
 	}
 }
 
-func (c *controllerImpl) SendUpdate(ctx context.Context, accountID string, affectedProxyID string, affectedPeerIDs []string) {
-	// noop
+func (c *controllerImpl) SendUpdate(ctx context.Context, accountID string, affectedProxyID string, affectedPeerIDs []string, accountPeers map[string]*peer.Peer) {
+	// no-op
 }
 
-func (c *controllerImpl) GetProxyNetworkMaps(ctx context.Context, accountID string) (map[string]*types.NetworkMap, error) {
+func (c *controllerImpl) GetProxyNetworkMaps(ctx context.Context, accountID, peerID string, accountPeers map[string]*peer.Peer) (map[string]*types.NetworkMap, error) {
+	return make(map[string]*types.NetworkMap), nil
+}
+
+func (c *controllerImpl) GetProxyNetworkMapsAll(ctx context.Context, accountID string, accountPeers map[string]*peer.Peer) (map[string]*types.NetworkMap, error) {
 	return make(map[string]*types.NetworkMap), nil
 }
 
