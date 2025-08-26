@@ -3,16 +3,17 @@ package integrations
 import (
 	"context"
 
-	"github.com/netbirdio/netbird/shared/management/proto"
 	"github.com/netbirdio/netbird/management/server/activity"
 	nbpeer "github.com/netbirdio/netbird/management/server/peer"
+	"github.com/netbirdio/netbird/management/server/peers"
 	"github.com/netbirdio/netbird/management/server/types"
+	"github.com/netbirdio/netbird/shared/management/proto"
 )
 
 type IntegratedValidatorImpl struct {
 }
 
-func NewIntegratedValidator(_ context.Context, store activity.Store) (*IntegratedValidatorImpl, error) {
+func NewIntegratedValidator(_ context.Context, peersManager peers.Manager, store activity.Store) (*IntegratedValidatorImpl, error) {
 	return &IntegratedValidatorImpl{}, nil
 }
 
