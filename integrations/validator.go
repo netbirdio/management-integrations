@@ -34,12 +34,12 @@ func (v *IntegratedValidatorImpl) IsNotValidPeer(_ context.Context, _ string, _ 
 	return false, false, nil
 }
 
-func (v *IntegratedValidatorImpl) GetValidatedPeers(_ context.Context, _ string, _ []*types.Group, peers []*nbpeer.Peer, _ *types.ExtraSettings) (map[string]struct{}, error) {
+func (v *IntegratedValidatorImpl) GetValidatedPeers(_ context.Context, _ string, _ []*types.Group, peers []*nbpeer.Peer, _ *types.ExtraSettings) (map[string]struct{}, map[string]string, error) {
 	validatedPeers := make(map[string]struct{})
 	for _, p := range peers {
 		validatedPeers[p.ID] = struct{}{}
 	}
-	return validatedPeers, nil
+	return validatedPeers, nil, nil
 }
 
 func (v *IntegratedValidatorImpl) PeerDeleted(ctx context.Context, _, _ string, extraSettings *types.ExtraSettings) error {
