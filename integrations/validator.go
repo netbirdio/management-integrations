@@ -26,7 +26,7 @@ func (v *IntegratedValidatorImpl) ValidatePeer(_ context.Context, update *nbpeer
 	return update, false, nil
 }
 
-func (v *IntegratedValidatorImpl) PreparePeer(_ context.Context, _ string, peer *nbpeer.Peer, _ []string, _ *types.ExtraSettings) *nbpeer.Peer {
+func (v *IntegratedValidatorImpl) PreparePeer(_ context.Context, _ string, peer *nbpeer.Peer, _ []string, _ *types.ExtraSettings, _ bool) *nbpeer.Peer {
 	return peer.Copy()
 }
 
@@ -34,7 +34,7 @@ func (v *IntegratedValidatorImpl) IsNotValidPeer(_ context.Context, _ string, _ 
 	return false, false, nil
 }
 
-func (v *IntegratedValidatorImpl) GetValidatedPeers(_ context.Context, _ string, _ []*types.Group, peers []*nbpeer.Peer, _ *types.ExtraSettings, _ bool) (map[string]struct{}, error) {
+func (v *IntegratedValidatorImpl) GetValidatedPeers(_ context.Context, _ string, _ []*types.Group, peers []*nbpeer.Peer, _ *types.ExtraSettings) (map[string]struct{}, error) {
 	validatedPeers := make(map[string]struct{})
 	for _, p := range peers {
 		validatedPeers[p.ID] = struct{}{}
