@@ -26,7 +26,7 @@ func (v *IntegratedValidatorImpl) ValidatePeer(_ context.Context, update *nbpeer
 	return update, false, nil
 }
 
-func (v *IntegratedValidatorImpl) PreparePeer(_ context.Context, _ string, peer *nbpeer.Peer, _ []string, _ *types.ExtraSettings) *nbpeer.Peer {
+func (v *IntegratedValidatorImpl) PreparePeer(_ context.Context, _ string, peer *nbpeer.Peer, _ []string, _ *types.ExtraSettings, _ bool) *nbpeer.Peer {
 	return peer.Copy()
 }
 
