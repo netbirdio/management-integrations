@@ -48,7 +48,7 @@ func InitEventStore(ctx context.Context, dataDir string, key string, _ *Metrics)
 	return store, key, err
 }
 
-func InitPermissionsManager(store store.Store) permissions.Manager {
+func InitPermissionsManager(store store.Store, metric metric.Meter) permissions.Manager {
 	return permissions.NewManager(store)
 }
 
