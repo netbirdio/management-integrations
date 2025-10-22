@@ -42,6 +42,10 @@ func (v *IntegratedValidatorImpl) GetValidatedPeers(_ context.Context, _ string,
 	return validatedPeers, nil
 }
 
+func (v *IntegratedValidatorImpl) GetInvalidPeers(ctx context.Context, accountID string, extraSettings *types.ExtraSettings) (map[string]string, error) {
+	return make(map[string]string), nil
+}
+
 func (v *IntegratedValidatorImpl) PeerDeleted(ctx context.Context, _, _ string, extraSettings *types.ExtraSettings) error {
 	return nil
 }
