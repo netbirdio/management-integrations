@@ -1,12 +1,10 @@
 module github.com/netbirdio/management-integrations/integrations
 
-go 1.23.0
-
-toolchain go1.23.1
+go 1.24.10
 
 require (
 	github.com/gorilla/mux v1.8.0
-	github.com/netbirdio/netbird v0.59.13-0.20251114142904-6d2f6098243f
+	github.com/netbirdio/netbird v0.60.5-0.20251202113428-7193bd2da7be
 	github.com/sirupsen/logrus v1.9.3
 	go.opentelemetry.io/otel/metric v1.35.0
 )
@@ -18,7 +16,7 @@ require (
 	dario.cat/mergo v1.0.0 // indirect
 	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/Azure/go-ansiterm v0.0.0-20230124172434-306776ec8161 // indirect
-	github.com/BurntSushi/toml v1.4.0 // indirect
+	github.com/BurntSushi/toml v1.5.0 // indirect
 	github.com/Microsoft/go-winio v0.6.2 // indirect
 	github.com/Microsoft/hcsshim v0.12.3 // indirect
 	github.com/TheJumpCloud/jcapi-go v3.0.0+incompatible // indirect
@@ -110,15 +108,15 @@ require (
 	go.opentelemetry.io/otel/trace v1.35.0 // indirect
 	go.uber.org/mock v0.5.0 // indirect
 	goauthentik.io/api/v3 v3.2023051.3 // indirect
-	golang.org/x/crypto v0.40.0 // indirect
+	golang.org/x/crypto v0.45.0 // indirect
 	golang.org/x/exp v0.0.0-20240506185415-9bf2ced13842 // indirect
-	golang.org/x/mod v0.26.0 // indirect
-	golang.org/x/net v0.42.0 // indirect
+	golang.org/x/mod v0.30.0 // indirect
+	golang.org/x/net v0.47.0 // indirect
 	golang.org/x/oauth2 v0.30.0 // indirect
-	golang.org/x/sync v0.16.0 // indirect
-	golang.org/x/sys v0.34.0 // indirect
-	golang.org/x/text v0.27.0 // indirect
-	golang.org/x/tools v0.34.0 // indirect
+	golang.org/x/sync v0.18.0 // indirect
+	golang.org/x/sys v0.38.0 // indirect
+	golang.org/x/text v0.31.0 // indirect
+	golang.org/x/tools v0.39.0 // indirect
 	golang.zx2c4.com/wireguard/windows v0.5.3 // indirect
 	google.golang.org/api v0.177.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250707201910-8d1bb00bc6a7 // indirect
