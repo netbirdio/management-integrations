@@ -18,7 +18,7 @@ func NewIntegratedValidator(_ context.Context, peersManager peers.Manager, setti
 	return &IntegratedValidatorImpl{}, nil
 }
 
-func (v *IntegratedValidatorImpl) ValidateExtraSettings(context.Context, *types.ExtraSettings, *types.ExtraSettings, map[string]*nbpeer.Peer, string, string) error {
+func (v *IntegratedValidatorImpl) ValidateExtraSettings(context.Context, *types.ExtraSettings, *types.ExtraSettings, string, string) error {
 	return nil
 }
 
