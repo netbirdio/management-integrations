@@ -4,7 +4,10 @@ import (
 	"context"
 
 	"github.com/gorilla/mux"
+
 	"github.com/netbirdio/netbird/management/internals/modules/peers"
+	"github.com/netbirdio/netbird/util/crypt"
+
 	log "github.com/sirupsen/logrus"
 	"go.opentelemetry.io/otel/metric"
 
@@ -39,7 +42,7 @@ func InitEventStore(ctx context.Context, dataDir string, key string, _ *Metrics)
 	var err error
 	if key == "" {
 		log.Debugf("generate new activity store encryption key")
-		key, err = activitystore.GenerateKey()
+		key, err = crypt.GenerateKey()
 		if err != nil {
 			return nil, "", err
 		}
