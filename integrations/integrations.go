@@ -64,3 +64,7 @@ func InitIntegrationMetrics(ctx context.Context, metrics telemetry.AppMetrics) (
 		AppMetrics: metrics,
 	}, nil
 }
+
+func IsValidChildAccount(_ context.Context, _, _ string) bool {
+	return false
+}
