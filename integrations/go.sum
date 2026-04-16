@@ -234,6 +234,8 @@ github.com/netbirdio/dex v0.244.0 h1:1GOvi8wnXYassnKGildzNqRHq0RbcfEUw7LKYpKIN7U
 github.com/netbirdio/dex v0.244.0/go.mod h1:STGInJhPcAflrHmDO7vyit2kSq03PdL+8zQPoGALtcU=
 github.com/netbirdio/netbird v0.62.3 h1:d0j+nznzgYwELavuIu1CbF4dNfRgLB3d6haq0sFM5e0=
 github.com/netbirdio/netbird v0.62.3/go.mod h1:l6wZOkwN5q2MznIrWIW9pMgZC/ATsDvEN9R8kILE3P8=
+github.com/netbirdio/netbird v0.65.3 h1://bhpHRW3GgneF6IxvtWOrlBzK7PgSrPDdeWVPpLuQ0=
+github.com/netbirdio/netbird v0.65.3/go.mod h1:Yeh8fZDsfngjcWedgGrzLKzsxKbGw2dQBOrJpLntpiw=
 github.com/netbirdio/netbird v0.67.2-0.20260327134706-beee14b9bfe5 h1:N5WzNA/JrDppPAA+sA6+cDGyBfBwqX9iuF/Eges1zmQ=
 github.com/netbirdio/netbird v0.67.2-0.20260327134706-beee14b9bfe5/go.mod h1:yr3CsO7aMZVYvqXQWlRPnVwcM7Iad0aYdLawn/oNUfw=
 github.com/nxadm/tail v1.4.8 h1:nPr65rt6Y5JFSKQO7qToXr7pePgD6Gwiw05lkbyAQTE=

@@ -1,8 +1,9 @@
 module github.com/netbirdio/management-integrations/integrations
 
-go 1.25.5
+go 1.25
 
 require (
+	github.com/eko/gocache/lib/v4 v4.2.0
 	github.com/gorilla/mux v1.8.1
 	github.com/netbirdio/netbird v0.67.2-0.20260327134706-beee14b9bfe5
 	github.com/sirupsen/logrus v1.9.3
@@ -42,7 +43,6 @@ require (
 	github.com/docker/docker v28.0.1+incompatible // indirect
 	github.com/docker/go-connections v0.5.0 // indirect
 	github.com/docker/go-units v0.5.0 // indirect
-	github.com/eko/gocache/lib/v4 v4.2.0 // indirect
 	github.com/eko/gocache/store/go_cache/v4 v4.2.2 // indirect
 	github.com/eko/gocache/store/redis/v4 v4.2.2 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect

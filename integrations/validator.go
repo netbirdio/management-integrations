@@ -3,6 +3,7 @@ package integrations
 import (
 	"context"
 
+	cachestore "github.com/eko/gocache/lib/v4/store"
 	"github.com/netbirdio/netbird/management/internals/modules/peers"
 	"github.com/netbirdio/netbird/management/server/activity"
 	nbpeer "github.com/netbirdio/netbird/management/server/peer"
@@ -14,7 +15,7 @@ import (
 type IntegratedValidatorImpl struct {
 }
 
-func NewIntegratedValidator(_ context.Context, peersManager peers.Manager, settingsManager settings.Manager, store activity.Store) (*IntegratedValidatorImpl, error) {
+func NewIntegratedValidator(_ context.Context, _ peers.Manager, _ settings.Manager, _ activity.Store, _ cachestore.StoreInterface) (*IntegratedValidatorImpl, error) {
 	return &IntegratedValidatorImpl{}, nil
 }
 
