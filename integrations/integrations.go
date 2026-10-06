@@ -18,7 +18,6 @@ import (
 	"github.com/netbirdio/netbird/management/server/activity"
 	activitystore "github.com/netbirdio/netbird/management/server/activity/store"
 	"github.com/netbirdio/netbird/management/server/integrations/integrated_validator"
-	"github.com/netbirdio/netbird/management/server/integrations/port_forwarding"
 	"github.com/netbirdio/netbird/management/server/permissions"
 	"github.com/netbirdio/netbird/management/server/settings"
 )
@@ -32,7 +31,6 @@ func RegisterHandlers(
 	meter metric.Meter,
 	permissionsManager permissions.Manager,
 	peersManager peers.Manager,
-	proxyController port_forwarding.Controller,
 	settingsManager settings.Manager,
 ) (*mux.Router, error) {
 	return router, nil
