@@ -6,17 +6,13 @@ import (
 	"github.com/gorilla/mux"
 
 	"github.com/netbirdio/netbird/management/internals/modules/peers"
-	"github.com/netbirdio/netbird/util/crypt"
 
-	log "github.com/sirupsen/logrus"
 	"go.opentelemetry.io/otel/metric"
 
 	"github.com/netbirdio/netbird/management/server/store"
 	"github.com/netbirdio/netbird/management/server/telemetry"
 
 	"github.com/netbirdio/netbird/management/server/account"
-	"github.com/netbirdio/netbird/management/server/activity"
-	activitystore "github.com/netbirdio/netbird/management/server/activity/store"
 	"github.com/netbirdio/netbird/management/server/integrations/integrated_validator"
 	"github.com/netbirdio/netbird/management/server/permissions"
 	"github.com/netbirdio/netbird/management/server/settings"
@@ -34,19 +30,6 @@ func RegisterHandlers(
 	settingsManager settings.Manager,
 ) (*mux.Router, error) {
 	return router, nil
-}
-
-func InitEventStore(ctx context.Context, dataDir string, key string, _ *Metrics) (activity.Store, string, error) {
-	var err error
-	if key == "" {
-		log.Debugf("generate new activity store encryption key")
-		key, err = crypt.GenerateKey()
-		if err != nil {
-			return nil, "", err
-		}
-	}
-	store, err := activitystore.NewSqlStore(ctx, dataDir, key)
-	return store, key, err
 }
 
 func InitPermissionsManager(store store.Store, metric metric.Meter) permissions.Manager {
